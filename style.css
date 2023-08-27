@@ -1,0 +1,106 @@
+/* task list styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #eee;
+    font-size: 20px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background-color: #bfbfbf;
+}
+
+ul li:hover {
+    background-color: #7e8ca1;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+/* Tick button */
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 15px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* header */
+.header {
+    background-color: rgb(28, 55, 173);
+    color: white;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+}
+.header::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* input box */
+#myInput {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.myBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+.myBtn:hover{
+    background-color: grey;
+    color: white;
+}
+/* close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem;
+}
+
+.close:hover {
+    background-color: rgb(28, 55, 173);
+    color: white;
+}
